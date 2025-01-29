@@ -65,6 +65,7 @@ function updateEmoji(emoji) {
     const yOffset = 5; // Adjust this value as needed
     ctx.fillText(emoji, canvas.width / 2, canvas.height / 2 + yOffset);
     document.getElementById('favicon').href = canvas.toDataURL();
+    updateUrlParam('emoji', emoji);
 }
 
 function updateTitle(title) {
@@ -72,4 +73,11 @@ function updateTitle(title) {
         return;
     }
     document.title = title;
+    updateUrlParam('title', title);
+}
+
+function updateUrlParam(key, value) {
+    const url = new URL(window.location.href);
+    url.searchParams.set(key, value);
+    window.history.replaceState({}, '', url);
 }
