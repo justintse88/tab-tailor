@@ -6,12 +6,11 @@ function getUrlParameter(name) {
 }
 
 window.onload = function() {
-    const emojiParam = getUrlParameter('emoji');
+    const emojiParam = getUrlParameter('emoji') || '🙏🏻';
+    document.getElementById('emojiDisplay').textContent = emojiParam;
+    updateEmoji(emojiParam);
+
     const titleParam = getUrlParameter('title') || 'Tab Tailor';
-    if (emojiParam) {
-        document.getElementById('emojiDisplay').textContent = emojiParam;
-        updateEmoji(emojiParam);
-    }
     document.getElementById('titleInput').value = titleParam;
     updateTitle(titleParam);
 };
