@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Tailor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link id="favicon" rel="icon" href="">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+</head>
+<body>
+<div class="controls-container">
+    <div id="emoji" class="emoji-display">
+        <span id="emojiDisplay">😀</span>
+        <emoji-picker id="emojiPicker" style="display: none;"></emoji-picker>
+    </div>
+    <label for="titleInput"></label>
+    <input type="text" id="titleInput">
+</div>
+<div class="instructions">
+    <h2>Instructions</h2>
+    <p>This page allows you to customize the tab title and favicon using an emoji picker and an input field. There are two ways to set the emoji and title:</p>
+    <h3>1. Use the Picker, Input, and Update</h3>
+    <p>Click on the emoji display to open the emoji picker. Select an emoji, enter a new title in the input field, and click the Update button to set the new title and favicon.</p>
+    <h3>2. Use the URL Parameters</h3>
+    <p>You can set the emoji and title on page load by using URL parameters. For example, <code>?emoji=😀&title=New%20Title</code>.</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
