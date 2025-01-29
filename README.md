@@ -14,7 +14,7 @@ This project exists because I always have multiple browser windows opened, each 
 
 ## Usage
 
-### 1. Use the Picker, Input, and Update
+### 1. Manual Input
 
 - Click on the emoji display to open the emoji picker.
 - Select an emoji.
